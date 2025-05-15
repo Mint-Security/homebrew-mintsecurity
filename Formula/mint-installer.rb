@@ -8,21 +8,17 @@ class MintInstaller < Formula
   depends_on "python@3.12"
 
   def install
-    libexec.install "main.py"
-    libexec.install "src"
-    libexec.install "claude-desktop.zip"
-    libexec.install "default.zip"
+    libexec.install %w[main.py src claude-desktop.zip default.zip]
   
-    (bin/"mint-supervisor").write <<~EOS
+    (bin/"mint-installer").write <<~EOS
       #!/bin/bash
       cd "#{libexec}"
-      exec "#{Formula["python@3.12"].opt_bin}/python3" main.py "$@"
+      exec "/opt/homebrew/opt/python@3.12/libexec/bin/python" main.py "$@"
     EOS
   end
-  
 
   test do
     # Check the wrapper script can run and respond to something basic
-    system "#{bin}/mint-supervisor", "--help"
+    system "#{bin}/mint-installer", "--help"
   end
 end
