@@ -8,7 +8,7 @@ class MintInstaller < Formula
   depends_on "python@3.12"
 
   def install
-    libexec.install %w[main.py src claude-desktop.zip default.zip]
+    libexec.install %w[main.py src claude-desktop.zip default.zip claude-code.zip]
   
     (bin/"mint-installer").write <<~EOS
       #!/bin/bash
