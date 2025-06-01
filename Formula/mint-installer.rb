@@ -1,8 +1,8 @@
 class MintInstaller < Formula
   desc "Interactive Mint Supervisor installer"
   homepage "https://github.com/Mint-Security/MintSupervisorMCP"
-  url "https://github.com/Mint-Security/MintSupervisorMCP/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "886f0572d7db5887ca898b8afececdda7349e6a4b2eeb73e0e14342ee38ede9b"
+  url "https://github.com/Mint-Security/MintSupervisorMCP/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "69a421e39b22a270aff1dc51f15c2c8569a881a5724e7040d27b24f5f52f64d1"
   license "Proprietary"
 
   depends_on "python@3.12"
