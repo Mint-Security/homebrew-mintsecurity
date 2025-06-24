@@ -8,12 +8,17 @@ class MintClientInstaller < Formula
   depends_on "python@3.12"
 
   def install
-    libexec.install Dir["*"] # Installs all files in the tarball; adjust as needed
+    # Install the main application
+    libexec.install Dir["*"]
+    
+    # Install Python dependencies using the system Python
+    system Formula["python@3.12"].opt_bin/"pip3.12", "install", "--target", libexec/"vendor", "requests"
 
     (bin/"mint-client-installer").write <<~EOS
       #!/bin/bash
       cd "#{libexec}"
-      exec "/opt/homebrew/opt/python@3.12/libexec/bin/python" main.py "$@"
+      export PYTHONPATH="#{libexec}/vendor:$PYTHONPATH"
+      exec "#{Formula["python@3.12"].opt_bin}/python3.12" main.py "$@"
     EOS
   end
 
