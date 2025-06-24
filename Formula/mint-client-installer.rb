@@ -1,4 +1,4 @@
-class MintMcpProxyServerInstaller < Formula
+class MintClientInstaller < Formula
   desc "Mint MCP Proxy Server installer"
   homepage "https://github.com/Mint-Security/mint-mcp-proxy-server-installer"
   url "https://github.com/Mint-Security/mint-mcp-proxy-server-installer/archive/refs/tags/v1.0.0.tar.gz"
