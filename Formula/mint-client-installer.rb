@@ -1,8 +1,8 @@
 class MintClientInstaller < Formula
   desc "Mint MCP Proxy Server installer"
   homepage "https://github.com/Mint-Security/mint-mcp-proxy-server-installer"
-  url "https://github.com/Mint-Security/mint-mcp-proxy-server-installer/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "b42474333f31b12f32e6119eeccd884bafbee4468ea6d93900b9de6e8b9a847f"
+  url "https://github.com/Mint-Security/mint-mcp-proxy-server-installer/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "36691fd7549d3f866e04028d36683fca298c44811b4d63088bf21260bb1b410e"
   license "Proprietary"
 
   depends_on "python@3.12"
